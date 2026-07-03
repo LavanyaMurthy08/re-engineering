@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | SkillForge AI</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="logo">SkillForge AI</h2>
+        <ul>
+            <li class="active"><a href="dashboard.html">🏠 Dashboard</a></li>
+            <li><a href="resume.html">📄 Resume</a></li>
+            <li><a href="github.html">💻 GitHub</a></li>
+            <li><a href="coding.html">📚 Coding</a></li>
+            <li><a href="roadmap.html">🎯 Roadmap</a></li>
+            <li><a href="settings.html">⚙ Settings</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div class="welcome">
+                <h1 id="welcomeHeading">Welcome Back 👋</h1>
+                <p>Ready to achieve your career goals today?</p>
+            </div>
+
+            <div class="topbar-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search...">
+                </div>
+
+                <div class="notification">
+                    🔔
+                    <span class="badge">3</span>
+                </div>
+
+                <div class="profile">
+                    <img id="profileImg" src="https://i.pravatar.cc/45" alt="profile">
+                    <span id="profileName">Guest</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="cards">
+            <div class="card">
+                <h3>Resume Score</h3>
+                <h2 id="cardResume">—</h2>
+            </div>
+            <div class="card">
+                <h3>Coding Problems Solved</h3>
+                <h2 id="cardCoding">0</h2>
+            </div>
+            <div class="card">
+                <h3>GitHub Score</h3>
+                <h2 id="cardGithub">—</h2>
+            </div>
+            <div class="card">
+                <h3>Learning Progress</h3>
+                <h2 id="cardRoadmap">0%</h2>
+            </div>
+        </section>
+
+        <section class="quick-links">
+            <a href="resume.html" class="quick-card">
+                <span class="quick-icon">📄</span>
+                <div>
+                    <h3>Analyze your resume</h3>
+                    <p>Get an instant, transparent score with tips to improve.</p>
+                </div>
+            </a>
+            <a href="github.html" class="quick-card">
+                <span class="quick-icon">💻</span>
+                <div>
+                    <h3>Connect GitHub</h3>
+                    <p>See your repos, stars, and top languages at a glance.</p>
+                </div>
+            </a>
+            <a href="coding.html" class="quick-card">
+                <span class="quick-icon">📚</span>
+                <div>
+                    <h3>Log practice problems</h3>
+                    <p>Track what you've solved and keep your streak alive.</p>
+                </div>
+            </a>
+            <a href="roadmap.html" class="quick-card">
+                <span class="quick-icon">🎯</span>
+                <div>
+                    <h3>Follow your roadmap</h3>
+                    <p>Check off skills as you learn full-stack development.</p>
+                </div>
+            </a>
+        </section>
+
+    </main>
+</div>
+
+<script src="../js/dashboard.js"></script>
+</body>
+</html>

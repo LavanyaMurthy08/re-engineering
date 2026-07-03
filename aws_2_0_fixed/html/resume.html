@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume Analyzer | SkillForge AI</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="../css/pages.css">
+<link rel="stylesheet" href="../css/resume.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2 class="logo">SkillForge AI</h2>
+        <ul>
+            <li><a href="dashboard.html">🏠 Dashboard</a></li>
+            <li class="active"><a href="resume.html">📄 Resume</a></li>
+            <li><a href="github.html">💻 GitHub</a></li>
+            <li><a href="coding.html">📚 Coding</a></li>
+            <li><a href="roadmap.html">🎯 Roadmap</a></li>
+            <li><a href="settings.html">⚙ Settings</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+
+        <div class="page-header">
+            <h1>📄 Resume Analyzer</h1>
+            <p>Upload your resume and get an instant, transparent score with actionable feedback.</p>
+        </div>
+
+        <div class="panel">
+            <h2>1. Upload your resume</h2>
+
+            <div class="dropzone" id="dropzone">
+                <div class="dropzone-icon">📤</div>
+                <p><strong>Click to upload</strong> or drag and drop</p>
+                <p class="hint">.pdf or .txt file — analyzed entirely in your browser, nothing is uploaded to a server</p>
+                <input type="file" id="fileInput" accept=".pdf,.txt" hidden>
+            </div>
+
+            <div id="fileInfo" class="file-info" style="display:none;">
+                <span id="fileName"></span>
+                <button class="btn secondary" id="changeFileBtn" type="button">Change file</button>
+            </div>
+
+            <button class="btn" id="analyzeBtn" style="margin-top:18px;" disabled>Analyze Resume</button>
+            <p class="hint" id="statusText"></p>
+        </div>
+
+        <div class="panel" id="resultsPanel" style="display:none;">
+            <h2>2. Your Score</h2>
+
+            <div class="score-summary">
+                <div class="score-ring-wrap">
+                    <div class="score-ring" id="scoreRing">
+                        <span id="scoreNumber">0</span>
+                    </div>
+                    <p id="scoreLabel" class="hint" style="text-align:center;">Overall Score</p>
+                </div>
+
+                <div class="score-breakdown" id="scoreBreakdown"></div>
+            </div>
+        </div>
+
+        <div class="panel" id="tipsPanel" style="display:none;">
+            <h2>3. Suggestions to improve</h2>
+            <ul class="tips-list" id="tipsList"></ul>
+        </div>
+
+        <div class="panel">
+            <h2>How scoring works</h2>
+            <p class="hint" style="font-size:14px; line-height:1.7; color:#64748b;">
+                This is a rules-based check (not a magic black box) so you know exactly what's being measured:
+            </p>
+            <ul class="rubric-list">
+                <li><strong>Contact info (10 pts)</strong> — email and phone number found</li>
+                <li><strong>Core sections (30 pts)</strong> — Education, Experience, Skills, Projects headings present</li>
+                <li><strong>Action verbs (15 pts)</strong> — use of words like "built", "led", "designed", "improved"</li>
+                <li><strong>Quantified impact (15 pts)</strong> — numbers and percentages showing measurable results</li>
+                <li><strong>Relevant keywords (20 pts)</strong> — tech skills/tools matched against a common tech-role keyword list</li>
+                <li><strong>Length (10 pts)</strong> — ideally 300–900 words, long enough to show substance, short enough to stay readable</li>
+            </ul>
+        </div>
+
+    </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+<script src="../js/dashboard.js"></script>
+<script src="../js/resume.js"></script>
+</body>
+</html>

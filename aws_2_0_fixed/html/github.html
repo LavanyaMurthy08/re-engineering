@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub | SkillForge AI</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="../css/pages.css">
+<link rel="stylesheet" href="../css/github.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2 class="logo">SkillForge AI</h2>
+        <ul>
+            <li><a href="dashboard.html">🏠 Dashboard</a></li>
+            <li><a href="resume.html">📄 Resume</a></li>
+            <li class="active"><a href="github.html">💻 GitHub</a></li>
+            <li><a href="coding.html">📚 Coding</a></li>
+            <li><a href="roadmap.html">🎯 Roadmap</a></li>
+            <li><a href="settings.html">⚙ Settings</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+
+        <div class="page-header">
+            <h1>💻 GitHub Analytics</h1>
+            <p>Connect your public GitHub profile to see your stats at a glance.</p>
+        </div>
+
+        <div class="panel">
+            <h2>Connect your account</h2>
+            <div class="form-row" style="align-items:flex-end;">
+                <div class="form-group" style="margin-bottom:0;">
+                    <label for="ghUsername">GitHub username</label>
+                    <input type="text" id="ghUsername" placeholder="e.g. octocat">
+                </div>
+                <button class="btn" id="connectBtn" style="height:46px;">Connect</button>
+            </div>
+            <p class="hint" id="ghStatus">Uses GitHub's public REST API — no login or access token required. Only public data is fetched, directly from your browser.</p>
+        </div>
+
+        <div id="ghResults" style="display:none;">
+
+            <div class="panel">
+                <div class="profile-header">
+                    <img id="ghAvatar" src="" alt="avatar">
+                    <div>
+                        <h2 id="ghName" style="margin-bottom:4px;"></h2>
+                        <p class="hint" id="ghLogin"></p>
+                        <p id="ghBio" class="bio"></p>
+                        <a id="ghProfileLink" href="#" target="_blank" rel="noopener" class="btn secondary" style="margin-top:10px; display:inline-block;">View on GitHub ↗</a>
+                    </div>
+                </div>
+            </div>
+
+            <section class="cards" style="margin-bottom:25px;">
+                <div class="card">
+                    <h3>Public Repos</h3>
+                    <h2 id="statRepos">0</h2>
+                </div>
+                <div class="card">
+                    <h3>Followers</h3>
+                    <h2 id="statFollowers">0</h2>
+                </div>
+                <div class="card">
+                    <h3>Total Stars</h3>
+                    <h2 id="statStars">0</h2>
+                </div>
+                <div class="card">
+                    <h3>GitHub Score</h3>
+                    <h2 id="statScore">0%</h2>
+                </div>
+            </section>
+
+            <div class="panel">
+                <h2>Top languages</h2>
+                <div id="langBars"></div>
+            </div>
+
+            <div class="panel">
+                <h2>Top repositories</h2>
+                <div id="topRepos"></div>
+            </div>
+        </div>
+
+    </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="../js/dashboard.js"></script>
+<script src="../js/github.js"></script>
+</body>
+</html>

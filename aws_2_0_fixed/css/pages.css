@@ -1,0 +1,193 @@
+/* ===================================
+   SHARED PAGE STYLES
+   (used by resume / github / coding / roadmap / settings)
+=================================== */
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    font-size: 28px;
+    color: #1e293b;
+}
+
+.page-header p {
+    color: #64748b;
+    margin-top: 6px;
+}
+
+.panel {
+    background: white;
+    border-radius: 15px;
+    padding: 28px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    margin-bottom: 25px;
+}
+
+.panel h2 {
+    font-size: 19px;
+    color: #1e293b;
+    margin-bottom: 18px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+.btn.secondary {
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+.btn.secondary:hover {
+    background: #cbd5e1;
+}
+
+.btn.danger {
+    background: #dc2626;
+}
+
+.btn.danger:hover {
+    background: #b91c1c;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+}
+
+.hint {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-top: 6px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.tag.easy { background: #dcfce7; color: #16a34a; }
+.tag.medium { background: #fef9c3; color: #ca8a04; }
+.tag.hard { background: #fee2e2; color: #dc2626; }
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #94a3b8;
+}
+
+.toast {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #1e293b;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px 10px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+}
+
+th {
+    color: #64748b;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #94a3b8;
+    transition: 0.2s;
+}
+
+.icon-btn:hover {
+    color: #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .panel {
+        padding: 18px;
+    }
+}

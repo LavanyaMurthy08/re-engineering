@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coding Tracker | SkillForge AI</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="../css/pages.css">
+<link rel="stylesheet" href="../css/coding.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2 class="logo">SkillForge AI</h2>
+        <ul>
+            <li><a href="dashboard.html">🏠 Dashboard</a></li>
+            <li><a href="resume.html">📄 Resume</a></li>
+            <li><a href="github.html">💻 GitHub</a></li>
+            <li class="active"><a href="coding.html">📚 Coding</a></li>
+            <li><a href="roadmap.html">🎯 Roadmap</a></li>
+            <li><a href="settings.html">⚙ Settings</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+
+        <div class="page-header">
+            <h1>📚 Coding Practice Tracker</h1>
+            <p>Log the problems you solve on LeetCode, HackerRank, Codeforces, or anywhere else — and watch your consistency build up.</p>
+        </div>
+
+        <section class="cards" style="margin-bottom:25px;">
+            <div class="card">
+                <h3>Total Solved</h3>
+                <h2 id="statTotal">0</h2>
+            </div>
+            <div class="card">
+                <h3>This Week</h3>
+                <h2 id="statWeek">0</h2>
+            </div>
+            <div class="card">
+                <h3>Current Streak</h3>
+                <h2 id="statStreak">0 🔥</h2>
+            </div>
+            <div class="card">
+                <h3>Hardest Solved</h3>
+                <h2 id="statHardest">—</h2>
+            </div>
+        </section>
+
+        <div class="panel">
+            <h2>Log a solved problem</h2>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="probTitle">Problem title</label>
+                    <input type="text" id="probTitle" placeholder="e.g. Two Sum">
+                </div>
+                <div class="form-group">
+                    <label for="probPlatform">Platform</label>
+                    <select id="probPlatform">
+                        <option>LeetCode</option>
+                        <option>HackerRank</option>
+                        <option>Codeforces</option>
+                        <option>GeeksforGeeks</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="probDifficulty">Difficulty</label>
+                    <select id="probDifficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="probTopic">Topic</label>
+                    <input type="text" id="probTopic" placeholder="e.g. Arrays, DP">
+                </div>
+            </div>
+            <button class="btn" id="addProblemBtn">+ Add to log</button>
+        </div>
+
+        <div class="panel">
+            <h2>Difficulty breakdown</h2>
+            <div id="difficultyBars"></div>
+        </div>
+
+        <div class="panel">
+            <h2>Practice log</h2>
+            <div id="logTableWrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Problem</th>
+                            <th>Platform</th>
+                            <th>Difficulty</th>
+                            <th>Topic</th>
+                            <th>Date</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="logBody"></tbody>
+                </table>
+            </div>
+            <div class="empty-state" id="emptyState" style="display:none;">
+                No problems logged yet — add your first one above.
+            </div>
+        </div>
+
+    </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="../js/dashboard.js"></script>
+<script src="../js/coding.js"></script>
+</body>
+</html>

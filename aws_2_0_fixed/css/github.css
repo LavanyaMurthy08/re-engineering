@@ -1,0 +1,92 @@
+.profile-header {
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+}
+
+.profile-header img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.bio {
+    color: #475569;
+    font-size: 14px;
+    margin-top: 6px;
+    max-width: 500px;
+}
+
+.lang-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.lang-row .lang-name {
+    width: 120px;
+    font-size: 13px;
+    color: #475569;
+    flex-shrink: 0;
+}
+
+.lang-row .bar {
+    flex: 1;
+    height: 10px;
+    background: #e2e8f0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.lang-row .bar-fill {
+    height: 100%;
+    border-radius: 6px;
+    background: #2563eb;
+}
+
+.lang-row .pct {
+    width: 45px;
+    text-align: right;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.repo-card {
+    border: 1px solid #f1f5f9;
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+    transition: 0.2s;
+}
+
+.repo-card:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 10px rgba(0,0,0,.05);
+}
+
+.repo-card a {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.repo-card a:hover {
+    text-decoration: underline;
+}
+
+.repo-card p {
+    color: #64748b;
+    font-size: 13px;
+    margin: 6px 0 8px;
+}
+
+.repo-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    color: #94a3b8;
+}

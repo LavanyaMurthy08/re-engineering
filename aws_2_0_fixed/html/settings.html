@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings | SkillForge AI</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2 class="logo">SkillForge AI</h2>
+        <ul>
+            <li><a href="dashboard.html">🏠 Dashboard</a></li>
+            <li><a href="resume.html">📄 Resume</a></li>
+            <li><a href="github.html">💻 GitHub</a></li>
+            <li><a href="coding.html">📚 Coding</a></li>
+            <li><a href="roadmap.html">🎯 Roadmap</a></li>
+            <li class="active"><a href="settings.html">⚙ Settings</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+
+        <div class="page-header">
+            <h1>⚙ Settings</h1>
+            <p>Manage your profile and local data.</p>
+        </div>
+
+        <div class="panel">
+            <h2>Profile</h2>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="setName">Display name</label>
+                    <input type="text" id="setName" placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label for="setEmail">Email</label>
+                    <input type="email" id="setEmail" placeholder="you@example.com">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="setAvatar">Avatar URL (optional)</label>
+                <input type="text" id="setAvatar" placeholder="https://...">
+            </div>
+            <div class="form-group">
+                <label for="setBio">Short bio</label>
+                <textarea id="setBio" rows="3" placeholder="A short line about yourself"></textarea>
+            </div>
+            <button class="btn" id="saveProfileBtn">Save changes</button>
+        </div>
+
+        <div class="panel">
+            <h2>Data</h2>
+            <p class="hint" style="margin-bottom:14px;">
+                Everything in this app — your resume score, GitHub connection, coding log, and roadmap progress — is stored only in this browser (localStorage). Nothing is sent to a server.
+            </p>
+            <button class="btn danger" id="clearDataBtn">Clear all local data</button>
+        </div>
+
+    </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="../js/dashboard.js"></script>
+<script src="../js/settings.js"></script>
+</body>
+</html>

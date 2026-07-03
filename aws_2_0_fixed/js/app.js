@@ -1,0 +1,1 @@
+document.querySelector(".login-btn").onclick=()=>location.href="login.html";document.querySelector(".signup-btn").onclick=()=>location.href="signup.html";document.querySelector(".primary-btn").onclick=()=>location.href="signup.html";

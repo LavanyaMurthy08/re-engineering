@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roadmap | SkillForge AI</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="../css/pages.css">
+<link rel="stylesheet" href="../css/roadmap.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2 class="logo">SkillForge AI</h2>
+        <ul>
+            <li><a href="dashboard.html">🏠 Dashboard</a></li>
+            <li><a href="resume.html">📄 Resume</a></li>
+            <li><a href="github.html">💻 GitHub</a></li>
+            <li><a href="coding.html">📚 Coding</a></li>
+            <li class="active"><a href="roadmap.html">🎯 Roadmap</a></li>
+            <li><a href="settings.html">⚙ Settings</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+
+        <div class="page-header">
+            <h1>🎯 Full-Stack Developer Roadmap</h1>
+            <p>Check off skills as you learn them. Your progress here powers the "Learning Progress" card on your dashboard.</p>
+        </div>
+
+        <div class="panel">
+            <div class="progress-header">
+                <h2 style="margin-bottom:0;">Overall Progress</h2>
+                <span id="overallPct" class="overall-pct">0%</span>
+            </div>
+            <div class="overall-bar">
+                <div class="overall-bar-fill" id="overallBarFill"></div>
+            </div>
+        </div>
+
+        <div id="stagesContainer"></div>
+
+    </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="../js/dashboard.js"></script>
+<script src="../js/roadmap.js"></script>
+</body>
+</html>

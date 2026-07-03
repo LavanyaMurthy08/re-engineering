@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | SkillForge AI</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="../css/signup.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="signup-card">
+
+        <h1>Create Account</h1>
+
+        <p>Start your developer journey today.</p>
+
+        <form id="signupForm">
+
+            <div class="input-group">
+
+                <label>Full Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="John Doe">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="john@gmail.com">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Create Password">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Confirm Password</label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Confirm Password">
+
+            </div>
+
+            <!-- Password Strength -->
+
+            <div class="strength">
+
+                <div class="strength-bar">
+
+                    <div id="strengthFill"></div>
+
+                </div>
+
+                <small id="strengthText">
+
+                    Password Strength
+
+                </small>
+
+            </div>
+
+            <div class="terms">
+
+                <label>
+
+                    <input type="checkbox"
+                           id="terms">
+
+                    I agree to the Terms & Conditions
+
+                </label>
+
+            </div>
+
+            <button type="submit">
+
+                Create Account
+
+            </button>
+
+        </form>
+
+        <div class="login-link">
+
+            Already have an account?
+
+            <a href="login.html">
+
+                Login
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../js/signup.js"></script>
+
+</body>
+
+</html>
